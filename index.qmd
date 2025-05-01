@@ -1,12 +1,40 @@
----
-title: "Art Museum Director Semtiments on Diversity, Equity, and Inclusion as seen in Surveys from 2020 and 2022"
----
 
-This is a Quarto website.
+# Exploratory Analysis
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+## first stuff here
+
+<iframe width = "500" height = "500" src="plots/plotly_cluster.html"></iframe>
+
+## Interactive Plots
 
 ```{r}
+#| echo: false
+#| message: false
+#| warning: false
+load('PCA_Data.RData')
+library(plotly)
+
+plot_ly(
+  data = cluster_data,
+  x = ~PC1,
+  y = ~PC2,
+  type = 'scatter',
+  mode = 'markers',
+  color = ~factor(kmeans_cluster_k),
+  colors = c("yellowgreen", "orange", "palevioletred",  "turquoise", "indianred4"),
+  text = ~paste("ID:", survey_data_2022_pca$id), 
+  hoverinfo = 'text',
+  marker = list(size = 8, opacity = 1)
+) %>%
+  layout(
+    title = list(
+      text = "K-means Clustering on PCA Data",
+      x = 0.5,                      
+      xanchor = "center"
+    ),
+    xaxis = list(title = "PC1"),
+    yaxis = list(title = "PC2"),
+    legend = list(title = list(text = "Cluster"))
+  )
 
 ```
- 

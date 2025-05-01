@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Art Museum Director Semtiments on Diversity, Equity, and Inclusion as seen in Surveys from 2020 and 2022",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+    "text": "load('PCA_Data.RData')\nlibrary(plotly)\n\nLoading required package: ggplot2\n\n\n\nAttaching package: 'plotly'\n\n\nThe following object is masked from 'package:ggplot2':\n\n    last_plot\n\n\nThe following object is masked from 'package:stats':\n\n    filter\n\n\nThe following object is masked from 'package:graphics':\n\n    layout\n\nplot_ly(\n  data = cluster_data,\n  x = ~PC1,\n  y = ~PC2,\n  type = 'scatter',\n  mode = 'markers',\n  color = ~factor(kmeans_cluster_k),\n  colors = c(\"yellowgreen\", \"orange\", \"palevioletred\",  \"turquoise\", \"indianred4\"),\n  text = ~paste(\"ID:\", survey_data_2022_pca$id), \n  hoverinfo = 'text',\n  marker = list(size = 8, opacity = 1)\n) %&gt;%\n  layout(\n    title = list(\n      text = \"K-means Clustering on PCA Data\",\n      x = 0.5,                      \n      xanchor = \"center\"\n    ),\n    xaxis = list(title = \"PC1\"),\n    yaxis = list(title = \"PC2\"),\n    legend = list(title = list(text = \"Cluster\"))\n  )"
   },
   {
     "objectID": "about.html",
@@ -12,5 +12,12 @@
     "title": "About",
     "section": "",
     "text": "About this site\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "index.html#stuff-here",
+    "href": "index.html#stuff-here",
+    "title": "Art Museum Director Semtiments on Diversity, Equity, and Inclusion as seen in Surveys from 2020 and 2022",
+    "section": "stuff here",
+    "text": "stuff here"
   }
 ]

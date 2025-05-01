@@ -5,15 +5,7 @@ project:
     - Milestone_5_task_1.qmd
 
 website:
-  title: ""
-  sidebar:
-    style: "floating"
-    search: true
-    contents:
-      - section: "Exploratory Analysis"
-        contents:
-          - href: plots/plotly_cluster.html
-            text: "Interactive Plot"
+  title: "Art Museum Director Semtiments on Diversity, Equity, and Inclusion as seen in Surveys from 2020 and 2022"
   navbar:
     left:
       - href: index.qmd
@@ -25,5 +17,6 @@ format:
     theme: united
     css: styles.css
     toc: true
+    toc-location: left
 
 editor: visual
