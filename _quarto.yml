@@ -1,0 +1,54 @@
+# project:
+#   type: website
+#   resources: 
+#      - plotly_cluster.html
+# 
+# website:
+#   title: ""
+#   sidebar:
+#     style: "floating"
+#     search: true
+#     contents:
+#       - section: "Exploratory Analysis"
+#       - href: plotly_cluster.html
+#   navbar:
+#     left:
+#       - href: index.qmd
+#         text: Home
+#       - about.qmd
+# 
+# format:
+#   html:
+#     theme: united
+#     css: styles.css
+#     toc: true
+# 
+# editor: visual
+project:
+  type: website
+  resources:
+    - plots/plotly_cluster.html
+
+website:
+  title: ""
+  sidebar:
+    style: "floating"
+    search: true
+    contents:
+      - section: "Exploratory Analysis"
+        contents:
+          - href: plots/plotly_cluster.html
+            text: "Interactive Plot"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - about.qmd
+
+format:
+  html:
+    theme: united
+    css: styles.css
+    toc: true
+
+editor: visual

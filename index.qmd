@@ -1,0 +1,8 @@
+---
+title: "Art Museum Director Semtiments on Diversity, Equity, and Inclusion as seen in Surveys from 2020 and 2022"
+---
+
+This is a Quarto website.
+
+To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+
