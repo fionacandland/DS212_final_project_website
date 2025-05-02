@@ -3,7 +3,7 @@
 
 ## first stuff here
 
-<iframe width = "500" height = "500" src="plots/plotly_cluster.html"></iframe>
+<iframe width = "700" height = "500" src="plots/plotly_cluster.html"></iframe>
 
 ## Interactive Plots
 
