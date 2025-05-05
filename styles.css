@@ -1,1 +1,5 @@
 /* css styles */
+$navbar-bg: #9158A2;
+$navbar-fg: white;
+$navbar-hl: darken (#9158A2, 10);
+$link-color: white;
