@@ -1,5 +1,9 @@
 /* css styles */
 $navbar-bg: #9158A2;
 $navbar-fg: white;
+<<<<<<< Updated upstream
 $navbar-hl: darken (#9158A2, 10);
+=======
+$navbar-hl: darken(#9158A2, 10);
+>>>>>>> Stashed changes
 $link-color: white;

@@ -1,11 +1,10 @@
 
 # Exploratory Analysis
 
-## first stuff here
 
-<iframe width = "700" height = "500" src="plots/plotly_cluster.html"></iframe>
+<!-- <iframe width = "700" height = "500" src="plots/plotly_cluster.html"></iframe> -->
 
-## Interactive Plots
+## PCA and Clustering
 
 ```{r}
 #| echo: false
@@ -13,6 +12,7 @@
 #| warning: false
 load('PCA_Data.RData')
 library(plotly)
+library(factoextra)
 
 plot_ly(
   data = cluster_data,
@@ -21,7 +21,7 @@ plot_ly(
   type = 'scatter',
   mode = 'markers',
   color = ~factor(kmeans_cluster_k),
-  colors = c("yellowgreen", "orange", "palevioletred",  "turquoise", "indianred4"),
+  colors = c("#797d97", "#cac7b9","#eeaa46", "#4a2329", "#e15b4f"),
   text = ~paste("ID:", survey_data_2022_pca$id), 
   hoverinfo = 'text',
   marker = list(size = 8, opacity = 1)
@@ -37,12 +37,19 @@ plot_ly(
     legend = list(title = list(text = "Cluster"))
   )
 
+<<<<<<< Updated upstream
 ```
 
+=======
+
+```
+## Survey Question Loading Plot
+>>>>>>> Stashed changes
 ```{r}
 #| echo: false
 #| message: false
 #| warning: false
+<<<<<<< Updated upstream
 load('bar_graph_data.RData')
 
 library(ggpubr)
@@ -284,4 +291,15 @@ plt20<-ggplot(survey_data_2020_cleaner,aes(x=Year,fill=Q10_10))+
 plt21<-ggarrange(plt19,plt20,ncol = 2, nrow = 2)
 print(plt21)
 ```
+=======
+#pca data set
+pca_2022 <- prcomp(survey_data_2022_pca, scale = TRUE, center = TRUE)
+
+#pca graph for variables
+fviz_pca_var(pca_2022, select.var = list(contrib = 20), col.var = "contrib",
+             gradient.cols = c("#eeaa46", "#797d97"), repel = TRUE)
+```
+
+## Informed Bar Plots 
+>>>>>>> Stashed changes
 
