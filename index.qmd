@@ -37,19 +37,31 @@ plot_ly(
     legend = list(title = list(text = "Cluster"))
   )
 
-<<<<<<< Updated upstream
-```
-
-=======
 
 ```
+
 ## Survey Question Loading Plot
->>>>>>> Stashed changes
+
 ```{r}
 #| echo: false
 #| message: false
 #| warning: false
-<<<<<<< Updated upstream
+pca_2022 <- prcomp(survey_data_2022_pca, scale = TRUE, center = TRUE)
+
+#pca graph for variables
+fviz_pca_var(pca_2022, select.var = list(contrib = 20), col.var = "contrib",
+             gradient.cols = c("#eeaa46", "#797d97"), repel = TRUE)
+```
+
+## Informed Bar Plots 
+
+
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
 load('bar_graph_data.RData')
 
 library(ggpubr)
@@ -63,12 +75,12 @@ library(viridis)
 plt1<-ggplot(survey_data_2022_cleaner,aes(x=Year,fill=Q5_1))+
   geom_bar()+
   scale_fill_manual(values = c(
-     "Extremely Important"  = "#7b3294",
-     "Very Important"       = "#984ea3",
-     "Somewhat Important"   = "#a05260", 
-     "Not Too Important"    = "#905d5d",
-     "Not At All Important" = "#984ea3",
-     "No Response" = 'lightgrey'))+
+     "Extremely Important"  = "#797d97",
+     "Very Important"       = "#e15b4f",
+     "Somewhat Important"   = "#eeaa46", 
+     "Not Too Important"    = "#4a2329",
+     "Not At All Important" = "#44424d",
+     "No Response" = "#cac7b9"))+
   facet_grid(~MUSEUMTYPE)+
   theme_minimal()+labs(title="How important to you is it that your museum currently serves in the following capacity:The museum regularly acquires artwork?")
 
@@ -76,12 +88,12 @@ plt1<-ggplot(survey_data_2022_cleaner,aes(x=Year,fill=Q5_1))+
 plt2<-ggplot(survey_data_2020_cleaner,aes(x=Year,fill=Q7_1))+
   geom_bar()+
    scale_fill_manual(values = c(
-     "Extremely Important"  = "#7b3294",
-     "Very Important"       = "#984ea3",
-     "Somewhat Important"   = "#a05260", 
-     "Not Too Important"    = "#905d5d",
-     "Not At All Important" = "#984ea3",
-     "No Response" = 'lightgrey'))+ 
+     "Extremely Important"  = "#797d97",
+     "Very Important"       = "#e15b4f",
+     "Somewhat Important"   = "#eeaa46", 
+     "Not Too Important"    = "#4a2329",
+     "Not At All Important" = "#44424d",
+     "No Response" = "#cac7b9"))+ 
 
   facet_grid(~MUSEUMTYPE)+
   theme_minimal()+labs(title="How important to you is it that your museum currently serves in the following capacity:The museum regularly acquires artwork?")
@@ -98,12 +110,12 @@ print(plt3)
 plt4<-ggplot(survey_data_2022_cleaner,aes(x=Year,fill=Q5_2))+
   geom_bar()+
   scale_fill_manual(values = c(
-     "Extremely Important"  = "#7b3294",
-     "Very Important"       = "#984ea3",
-     "Somewhat Important"   = "#a05260", 
-     "Not Too Important"    = "#905d5d",
-     "Not At All Important" = "#984ea3",
-     "No Response" = 'lightgrey'))+
+     "Extremely Important"  = "#797d97",
+     "Very Important"       = "#e15b4f",
+     "Somewhat Important"   = "#eeaa46", 
+     "Not Too Important"    = "#4a2329",
+     "Not At All Important" = "#44424d",
+     "No Response" = "#cac7b9"))+
   facet_grid(~MUSEUMTYPE)+
   theme_minimal() + labs(title="How important to you is it that your museum currently displays artwork from its permanent collections")
 
@@ -111,12 +123,12 @@ plt4<-ggplot(survey_data_2022_cleaner,aes(x=Year,fill=Q5_2))+
 plt5<-ggplot(survey_data_2020_cleaner,aes(x=Year,fill=Q7_2))+
   geom_bar()+
    scale_fill_manual(values = c(
-     "Extremely Important"  = "#7b3294",
-     "Very Important"       = "#984ea3",
-     "Somewhat Important"   = "#a05260", 
-     "Not Too Important"    = "#905d5d",
-     "Not At All Important" = "#984ea3",
-     "No Response" = 'lightgrey'))+ #
+     "Extremely Important"  = "#797d97",
+     "Very Important"       = "#e15b4f",
+     "Somewhat Important"   = "#eeaa46", 
+     "Not Too Important"    = "#4a2329",
+     "Not At All Important" = "#44424d",
+     "No Response" = "#cac7b9"))+ #
   facet_grid(~MUSEUMTYPE)+
   theme_minimal()+labs(title="How important to you is it that your museum currently displays artwork from its permanent collections")
 
@@ -132,12 +144,12 @@ print(plt6)
 plt7<-ggplot(survey_data_2022_cleaner,aes(x=Year,fill=Q6_1))+
   geom_bar()+
   scale_fill_manual(values = c(
-     "Extremely Important"  = "#7b3294",
-     "Very Important"       = "#984ea3",
-     "Somewhat Important"   = "#a05260", 
-     "Not Too Important"    = "#905d5d",
-     "Not At All Important" = "#984ea3",
-     "No Response" = 'lightgrey'))+
+     "Extremely Important"  = "#797d97",
+     "Very Important"       = "#e15b4f",
+     "Somewhat Important"   = "#eeaa46", 
+     "Not Too Important"    = "#4a2329",
+     "Not At All Important" = "#44424d",
+     "No Response" = "#cac7b9"))+
   facet_grid(~MUSEUMTYPE)+
   theme_minimal()+labs(title="How important to you is it that your museum will serve in the following capacity in five years: regularly acquire artwork?")
 
@@ -145,12 +157,12 @@ plt7<-ggplot(survey_data_2022_cleaner,aes(x=Year,fill=Q6_1))+
 plt8<-ggplot(survey_data_2020_cleaner,aes(x=Year,fill=Q8_1))+
   geom_bar()+
    scale_fill_manual(values = c(
-     "Extremely Important"  = "#7b3294",
-     "Very Important"       = "#984ea3",
-     "Somewhat Important"   = "#a05260", 
-     "Not Too Important"    = "#905d5d",
-     "Not At All Important" = "#984ea3",
-     "No Response" = 'lightgrey'))+ #
+     "Extremely Important"  = "#797d97",
+     "Very Important"       = "#e15b4f",
+     "Somewhat Important"   = "#eeaa46", 
+     "Not Too Important"    = "#4a2329",
+     "Not At All Important" = "#44424d",
+     "No Response" = "#cac7b9"))+ #
   facet_grid(~MUSEUMTYPE)+
   theme_minimal()+labs(title="How important to you is it that your museum will serve in the following capacity in five years: regularly acquire artwork?")
 
@@ -165,12 +177,12 @@ print(plt9)
 plt10<-ggplot(survey_data_2022_cleaner,aes(x=Year,fill=Q6_2))+
   geom_bar()+
   scale_fill_manual(values = c(
-     "Extremely Important"  = "#7b3294",
-     "Very Important"       = "#984ea3",
-     "Somewhat Important"   = "#a05260", 
-     "Not Too Important"    = "#905d5d",
-     "Not At All Important" = "#984ea3",
-     "No Response" = 'lightgrey'))+
+     "Extremely Important"  = "#797d97",
+     "Very Important"       = "#e15b4f",
+     "Somewhat Important"   = "#eeaa46", 
+     "Not Too Important"    = "#4a2329",
+     "Not At All Important" = "#44424d",
+     "No Response" = "#cac7b9"))+
   facet_grid(~MUSEUMTYPE)+
   theme_minimal()+labs(title="How important to you is it that your museum will serve in the following capacity in five years:display artwork from its permanent collections?")
 
@@ -178,12 +190,12 @@ plt10<-ggplot(survey_data_2022_cleaner,aes(x=Year,fill=Q6_2))+
 plt11<-ggplot(survey_data_2020_cleaner,aes(x=Year,fill=Q8_2))+
   geom_bar()+
    scale_fill_manual(values = c(
-     "Extremely Important"  = "#7b3294",
-     "Very Important"       = "#984ea3",
-     "Somewhat Important"   = "#a05260", 
-     "Not Too Important"    = "#905d5d",
-     "Not At All Important" = "#984ea3",
-     "No Response" = 'lightgrey'))+ #
+     "Extremely Important"  = "#797d97",
+     "Very Important"       = "#e15b4f",
+     "Somewhat Important"   = "#eeaa46", 
+     "Not Too Important"    = "#4a2329",
+     "Not At All Important" = "#44424d",
+     "No Response" = "#cac7b9"))+ #
   facet_grid(~MUSEUMTYPE)+
   theme_minimal()+labs(title="How important to you is it that your museum will serve in the following capacity in five years:display artwork from its permanent collections?")
 
@@ -199,12 +211,12 @@ print(plt12)
 plt13<-ggplot(survey_data_2022_cleaner,aes(x=Year,fill=Q6_4))+
   geom_bar()+
   scale_fill_manual(values = c(
-     "Extremely Important"  = "#7b3294",
-     "Very Important"       = "#984ea3",
-     "Somewhat Important"   = "#a05260", 
-     "Not Too Important"    = "#905d5d",
-     "Not At All Important" = "#984ea3",
-     "No Response" = 'lightgrey'))+
+     "Extremely Important"  = "#797d97",
+     "Very Important"       = "#e15b4f",
+     "Somewhat Important"   = "#eeaa46", 
+     "Not Too Important"    = "#4a2329",
+     "Not At All Important" = "#44424d",
+     "No Response" = "#cac7b9"))+
   facet_grid(~MUSEUMTYPE)+
   theme_minimal()+labs(title="How important to you is it that your museum will serve in the following capacity in five years: The museum ensures the conservation of its collections for the long-term future")
 
@@ -212,12 +224,12 @@ plt13<-ggplot(survey_data_2022_cleaner,aes(x=Year,fill=Q6_4))+
 plt14<-ggplot(survey_data_2020_cleaner,aes(x=Year,fill=Q8_4))+
   geom_bar()+
    scale_fill_manual(values = c(
-     "Extremely Important"  = "#7b3294",
-     "Very Important"       = "#984ea3",
-     "Somewhat Important"   = "#a05260", 
-     "Not Too Important"    = "#905d5d",
-     "Not At All Important" = "#984ea3",
-     "No Response" = 'lightgrey'))+ #
+     "Extremely Important"  = "#797d97",
+     "Very Important"       = "#e15b4f",
+     "Somewhat Important"   = "#eeaa46", 
+     "Not Too Important"    = "#4a2329",
+     "Not At All Important" = "#44424d",
+     "No Response" = "#cac7b9"))+ #
   facet_grid(~MUSEUMTYPE)+
   theme_minimal()+labs(title="How important to you is it that your museum will serve in the following capacity in five years: The museum ensures the conservation of its collections for the long-term future")
 
@@ -233,12 +245,12 @@ print(plt15)
 plt16<-ggplot(survey_data_2022_cleaner,aes(x=Year,fill=Q8_9))+
   geom_bar()+
   scale_fill_manual(values = c(
-     "Extremely Important"  = "#7b3294",
-     "Very Important"       = "#984ea3",
-     "Somewhat Important"   = "#a05260", 
-     "Not Too Important"    = "#905d5d",
-     "Not At All Important" = "#984ea3",
-     "No Response" = 'lightgrey'))+
+     "Extremely Important"  = "#797d97",
+     "Very Important"       = "#e15b4f",
+     "Somewhat Important"   = "#eeaa46", 
+     "Not Too Important"    = "#4a2329",
+     "Not At All Important" = "#44424d",
+     "No Response" = "#cac7b9"))+
   facet_grid(~MUSEUMTYPE)+
   theme_minimal()+labs(title="How much of a priority do you think each of the following equity, diversity, and inclusion strategies are in the art museum sector as a whole?:Increasing the diversity of staff in senior management positions")
 
@@ -246,12 +258,12 @@ plt16<-ggplot(survey_data_2022_cleaner,aes(x=Year,fill=Q8_9))+
 plt17<-ggplot(survey_data_2020_cleaner,aes(x=Year,fill=Q10_9))+
   geom_bar()+
    scale_fill_manual(values = c(
-     "Extremely Important"  = "#7b3294",
-     "Very Important"       = "#984ea3",
-     "Somewhat Important"   = "#a05260", 
-     "Not Too Important"    = "#905d5d",
-     "Not At All Important" = "#984ea3",
-     "No Response" = 'lightgrey'))+ #
+     "Extremely Important"  = "#797d97",
+     "Very Important"       = "#e15b4f",
+     "Somewhat Important"   = "#eeaa46", 
+     "Not Too Important"    = "#4a2329",
+     "Not At All Important" = "#44424d",
+     "No Response" = "#cac7b9"))+ #
   facet_grid(~MUSEUMTYPE)+
   theme_minimal()+labs(title="How much of a priority do you think each of the following equity, diversity, and inclusion strategies are in the art museum sector as a whole?:Increasing the diversity of staff in senior management positions")
 
@@ -266,12 +278,12 @@ print(plt18)
 plt19<-ggplot(survey_data_2022_cleaner,aes(x=Year,fill=Q8_11))+
   geom_bar()+
   scale_fill_manual(values = c(
-     "Extremely Important"  = "#7b3294",
-     "Very Important"       = "#984ea3",
-     "Somewhat Important"   = "#a05260", 
-     "Not Too Important"    = "#905d5d",
-     "Not At All Important" = "#984ea3",
-     "No Response" = 'lightgrey'))+
+     "Extremely Important"  = "#797d97",
+     "Very Important"       = "#e15b4f",
+     "Somewhat Important"   = "#eeaa46", 
+     "Not Too Important"    = "#4a2329",
+     "Not At All Important" = "#44424d",
+     "No Response" = "#cac7b9"))+
   facet_grid(~MUSEUMTYPE)+
   theme_minimal()+labs(title="How much of a priority do you think each of the following equity, diversity, and inclusion strategies are in the art museum sector as a whole?:Increasing the diversity of museum volunteers")
 
@@ -279,27 +291,22 @@ plt19<-ggplot(survey_data_2022_cleaner,aes(x=Year,fill=Q8_11))+
 plt20<-ggplot(survey_data_2020_cleaner,aes(x=Year,fill=Q10_10))+
   geom_bar()+
    scale_fill_manual(values = c(
-     "Extremely Important"  = "#7b3294",
-     "Very Important"       = "#984ea3",
-     "Somewhat Important"   = "#a05260", 
-     "Not Too Important"    = "#905d5d",
-     "Not At All Important" = "#984ea3",
-     "No Response" = 'lightgrey'))+ #
+     "Extremely Important"  = "#797d97",
+     "Very Important"       = "#e15b4f",
+     "Somewhat Important"   = "#eeaa46", 
+     "Not Too Important"    = "#4a2329",
+     "Not At All Important" = "#44424d",
+     "No Response" = "#cac7b9"))+ #
   facet_grid(~MUSEUMTYPE)+
   theme_minimal()+labs(title="How much of a priority do you think each of the following equity, diversity, and inclusion strategies are in the art museum sector as a whole?:Increasing the diversity of museum volunteers")
 
 plt21<-ggarrange(plt19,plt20,ncol = 2, nrow = 2)
 print(plt21)
 ```
-=======
-#pca data set
-pca_2022 <- prcomp(survey_data_2022_pca, scale = TRUE, center = TRUE)
 
-#pca graph for variables
-fviz_pca_var(pca_2022, select.var = list(contrib = 20), col.var = "contrib",
-             gradient.cols = c("#eeaa46", "#797d97"), repel = TRUE)
-```
 
-## Informed Bar Plots 
->>>>>>> Stashed changes
+
+
+
+
 
