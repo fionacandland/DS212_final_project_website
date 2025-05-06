@@ -76,9 +76,9 @@ plt1<-ggplot(survey_data_2022_cleaner,aes(x=MUSEUMTYPE,fill=Q5_1))+
   geom_bar()+
   scale_fill_manual(values = c(
      "Extremely Important"  = "#797d97",
-     "Very Important"       = "#e15b4f",
+     "Very Important"       = "#4a2329",
      "Somewhat Important"   = "#eeaa46", 
-     "Not Too Important"    = "#4a2329",
+     "Not Too Important"    = "#e15b4f",
      "Not At All Important" = "#44424d",
      "No Response" = "#cac7b9"))+
   ylim(0,100) +
@@ -89,9 +89,9 @@ plt2<-ggplot(survey_data_2020_cleaner,aes(x=MUSEUMTYPE,fill=Q7_1))+
   geom_bar()+
    scale_fill_manual(values = c(
      "Extremely Important"  = "#797d97",
-     "Very Important"       = "#e15b4f",
+     "Very Important"       = "#4a2329",
      "Somewhat Important"   = "#eeaa46", 
-     "Not Too Important"    = "#4a2329",
+     "Not Too Important"    = "#e15b4f",
      "Not At All Important" = "#44424d",
      "No Response" = "#cac7b9"))+
   ylim(0,100) +
@@ -112,9 +112,9 @@ plt4<-ggplot(survey_data_2022_cleaner,aes(x=MUSEUMTYPE,fill=Q5_2))+
   geom_bar()+
   scale_fill_manual(values = c(
      "Extremely Important"  = "#797d97",
-     "Very Important"       = "#e15b4f",
+     "Very Important"       = "#4a2329",
      "Somewhat Important"   = "#eeaa46", 
-     "Not Too Important"    = "#4a2329",
+     "Not Too Important"    = "#e15b4f",
      "Not At All Important" = "#44424d",
      "No Response" = "#cac7b9"))+
   ylim(0,100) +
@@ -125,9 +125,9 @@ plt5<-ggplot(survey_data_2020_cleaner,aes(x=MUSEUMTYPE,fill=Q7_2))+
   geom_bar()+
    scale_fill_manual(values = c(
      "Extremely Important"  = "#797d97",
-     "Very Important"       = "#e15b4f",
+     "Very Important"       = "#4a2329",
      "Somewhat Important"   = "#eeaa46", 
-     "Not Too Important"    = "#4a2329",
+     "Not Too Important"    = "#e15b4f",
      "Not At All Important" = "#44424d",
      "No Response" = "#cac7b9"))+ 
   ylim(0,100) +
@@ -148,9 +148,9 @@ plt7<-ggplot(survey_data_2022_cleaner,aes(x=MUSEUMTYPE,fill=Q6_1))+
   geom_bar()+
   scale_fill_manual(values = c(
      "Extremely Important"  = "#797d97",
-     "Very Important"       = "#e15b4f",
+     "Very Important"       = "#4a2329",
      "Somewhat Important"   = "#eeaa46", 
-     "Not Too Important"    = "#4a2329",
+     "Not Too Important"    = "#e15b4f",
      "Not At All Important" = "#44424d",
      "No Response" = "#cac7b9"))+
   ylim(0,100) +
@@ -161,9 +161,9 @@ plt8<-ggplot(survey_data_2020_cleaner,aes(x=MUSEUMTYPE,fill=Q8_1))+
   geom_bar()+
    scale_fill_manual(values = c(
      "Extremely Important"  = "#797d97",
-     "Very Important"       = "#e15b4f",
+     "Very Important"       = "#4a2329",
      "Somewhat Important"   = "#eeaa46", 
-     "Not Too Important"    = "#4a2329",
+     "Not Too Important"    = "#e15b4f",
      "Not At All Important" = "#44424d",
      "No Response" = "#cac7b9"))+ #
   ylim(0,100) +
@@ -184,9 +184,9 @@ plt10<-ggplot(survey_data_2022_cleaner,aes(x=MUSEUMTYPE,fill=Q6_2))+
   geom_bar()+
   scale_fill_manual(values = c(
      "Extremely Important"  = "#797d97",
-     "Very Important"       = "#e15b4f",
+     "Very Important"       = "#4a2329",
      "Somewhat Important"   = "#eeaa46", 
-     "Not Too Important"    = "#4a2329",
+     "Not Too Important"    = "#e15b4f",
      "Not At All Important" = "#44424d",
      "No Response" = "#cac7b9"))+
   ylim(0,100) +
@@ -197,9 +197,9 @@ plt11<-ggplot(survey_data_2020_cleaner,aes(x=MUSEUMTYPE,fill=Q8_2))+
   geom_bar()+
    scale_fill_manual(values = c(
      "Extremely Important"  = "#797d97",
-     "Very Important"       = "#e15b4f",
+     "Very Important"       = "#4a2329",
      "Somewhat Important"   = "#eeaa46", 
-     "Not Too Important"    = "#4a2329",
+     "Not Too Important"    = "#e15b4f",
      "Not At All Important" = "#44424d",
      "No Response" = "#cac7b9"))+ 
   ylim(0,100) +
@@ -221,9 +221,9 @@ plt13<-ggplot(survey_data_2022_cleaner,aes(x=MUSEUMTYPE,fill=Q6_4))+
   geom_bar()+
   scale_fill_manual(values = c(
      "Extremely Important"  = "#797d97",
-     "Very Important"       = "#e15b4f",
+     "Very Important"       = "#4a2329",
      "Somewhat Important"   = "#eeaa46", 
-     "Not Too Important"    = "#4a2329",
+     "Not Too Important"    = "#e15b4f",
      "Not At All Important" = "#44424d",
      "No Response" = "#cac7b9"))+
   ylim(0,100) +
@@ -234,9 +234,9 @@ plt14<-ggplot(survey_data_2020_cleaner,aes(x=MUSEUMTYPE,fill=Q8_4))+
   geom_bar()+
    scale_fill_manual(values = c(
      "Extremely Important"  = "#797d97",
-     "Very Important"       = "#e15b4f",
+     "Very Important"       = "#4a2329",
      "Somewhat Important"   = "#eeaa46", 
-     "Not Too Important"    = "#4a2329",
+     "Not Too Important"    = "#e15b4f",
      "Not At All Important" = "#44424d",
      "No Response" = "#cac7b9"))+ 
   ylim(0,100) +
@@ -257,14 +257,14 @@ annotate_figure(plt15, top = text_grob(str_wrap("How important to you is it that
 plt16<-ggplot(survey_data_2022_cleaner,aes(x=MUSEUMTYPE,fill=Q8_9))+
   geom_bar()+
    scale_fill_manual(values = c(
-     "Very High Priority"  = "#7b3294",
-     "High Priority"       = "#984ea3",
-     "Somewhat High Priority"   = "#a05260", 
-     "Neither A High Priority Nor A Low Priority" = "#905d5d",
-     "Somewhat Low Priority" = "#984ea3",
-     "Low Priority" = 'maroon',
-     "Very Low Priority" = "red",
-     "No Response" = "grey"))+
+     "Very High Priority"  = "#797d97",
+     "High Priority"       = "#4a2329",
+     "Somewhat High Priority"   = "#eeaa46", 
+     "Neither A High Priority Nor A Low Priority" = "#e15b4f",
+     "Somewhat Low Priority" = "#44424d",
+     "Low Priority" = "#a05260",
+     "Very Low Priority" = "#efda92",
+     "No Response" = "#cac7b9"))+
     ylim(0,100) +
   theme_minimal()+labs(fill='',title='Year: 2022', x = '')
 
@@ -279,14 +279,14 @@ plt16<-ggplot(survey_data_2022_cleaner,aes(x=MUSEUMTYPE,fill=Q8_9))+
 plt17<-ggplot(survey_data_2020_cleaner,aes(x=MUSEUMTYPE,fill=Q10_9))+
   geom_bar()+
    scale_fill_manual(values = c(
-     "Very High Priority"  = "#7b3294",
-     "High Priority"       = "#984ea3",
-     "Somewhat High Priority"   = "#a05260", 
-     "Neither A High Priority Nor A Low Priority" = "#905d5d",
-     "Somewhat Low Priority" = "#984ea3",
-     "Low Priority" = 'maroon',
-     "Very Low Priority" = "red",
-     "No Response" = "grey"))+
+     "Very High Priority"  = "#797d97",
+     "High Priority"       = "#4a2329",
+     "Somewhat High Priority"   = "#eeaa46", 
+     "Neither A High Priority Nor A Low Priority" = "#e15b4f",
+     "Somewhat Low Priority" = "#44424d",
+     "Low Priority" = "#a05260",
+     "Very Low Priority" = "#efda92",
+     "No Response" = "#cac7b9"))+
   ylim(0,100) +
   theme_minimal()+labs(fill='',title='Year: 2020', x = '')
 
@@ -310,14 +310,14 @@ annotate_figure(plt18, top = text_grob(str_c(str_wrap("How much of a priority do
 #| warning: false
 plt19<-ggplot(survey_data_2022_cleaner,aes(x=MUSEUMTYPE,fill=Q8_11))+
   geom_bar()+scale_fill_manual(values = c(
-     "Very High Priority"  = "#7b3294",
-     "High Priority"       = "#984ea3",
-     "Somewhat High Priority"   = "#a05260", 
-     "Neither A High Priority Nor A Low Priority" = "#905d5d",
-     "Somewhat Low Priority" = "#984ea3",
-     "Low Priority" = 'maroon',
-     "Very Low Priority" = "red",
-     "No Response" = "grey"))+
+     "Very High Priority"  = "#797d97",
+     "High Priority"       = "#4a2329",
+     "Somewhat High Priority"   = "#eeaa46", 
+     "Neither A High Priority Nor A Low Priority" = "#e15b4f",
+     "Somewhat Low Priority" = "#44424d",
+     "Low Priority" = "#a05260",
+     "Very Low Priority" = "#efda92",
+     "No Response" = "#cac7b9"))+
   ylim(0,100) +
   theme_minimal()+labs(fill='',title='Year: 2022', x = '')
   # scale_fill_manual(values = c(
@@ -330,14 +330,14 @@ plt19<-ggplot(survey_data_2022_cleaner,aes(x=MUSEUMTYPE,fill=Q8_11))+
 
 plt20<-ggplot(survey_data_2020_cleaner,aes(x=MUSEUMTYPE,fill=Q10_10))+
   geom_bar()+scale_fill_manual(values = c(
-     "Very High Priority"  = "#7b3294",
-     "High Priority"       = "#984ea3",
-     "Somewhat High Priority"   = "#a05260", 
-     "Neither A High Priority Nor A Low Priority" = "#905d5d",
-     "Somewhat Low Priority" = "#984ea3",
-     "Low Priority" = 'maroon',
-     "Very Low Priority" = "red",
-     "No Response" = "grey"))+
+     "Very High Priority"  = "#797d97",
+     "High Priority"       = "#4a2329",
+     "Somewhat High Priority"   = "#eeaa46", 
+     "Neither A High Priority Nor A Low Priority" = "#e15b4f",
+     "Somewhat Low Priority" = "#44424d",
+     "Low Priority" = "#a05260",
+     "Very Low Priority" = "#efda92",
+     "No Response" = "#cac7b9"))+
   ylim(0,100) +
   theme_minimal()+labs(fill='',title='Year: 2020', x = '')
 
