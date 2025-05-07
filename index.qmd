@@ -40,6 +40,8 @@ plot_ly(
 
 ```
 
+
+
 ## Survey Question Loading Plot
 
 ```{r}
@@ -50,7 +52,8 @@ pca_2022 <- prcomp(survey_data_2022_pca, scale = TRUE, center = TRUE)
 
 #pca graph for variables
 fviz_pca_var(pca_2022, select.var = list(contrib = 20), col.var = "contrib",
-             gradient.cols = c("#eeaa46", "#797d97"), repel = TRUE)
+             gradient.cols = c("#eeaa46", "#797d97"), repel = TRUE) +
+  labs(color = "Contribution Level")
 ```
 
 ## Informed Bar Plots 
@@ -103,6 +106,61 @@ annotate_figure(plt3, top = text_grob(str_wrap("How important to you is it that 
                color = "black", size = 14))
 
 ```
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+# library(plotly)
+# library(dplyr)
+# survey_data_2022_plotly <- survey_data_2022_cleaner %>%
+#   mutate(id = row_number())
+# 
+# survey_data_2020_plotly < survey_data_2020_cleaner %>% 
+#   mutate(id = row_number())
+# 
+# # Step 2: Prepare data for stacked bar with hover
+# bar_data <- survey_data_2022_cleaner %>%
+#   group_by(MUSEUMTYPE, Q5_1) %>%
+#   summarise(
+#     count = n(),
+#     ids = paste(id, collapse = ", "),
+#     .groups = "drop"
+#   )
+# 
+# # Step 3: Create stacked bar plot with hover text showing IDs
+# plot_ly(
+#   data = bar_data,
+#   x = ~MUSEUMTYPE,
+#   y = ~count,
+#   type = "bar",
+#   color = ~Q5_1,
+#   colors = c(
+#     "Extremely Important"  = "#797d97",
+#     "Very Important"       = "#4a2329",
+#     "Somewhat Important"   = "#eeaa46", 
+#     "Not Too Important"    = "#e15b4f",
+#     "Not At All Important" = "#44424d",
+#     "No Response"          = "#cac7b9"
+#   ),
+#   text = ~paste(
+#     "Response: ", Q5_1,
+#     "<br>Museum Type: ", MUSEUMTYPE,
+#     "<br>Count: ", count,
+#     "<br>IDs: ", ids
+#   ),
+#   hoverinfo = "text"
+# ) %>%
+#   layout(
+#     barmode = "stack",
+#     title = "How important is it that your museum acquires artwork?",
+#     xaxis = list(title = ""),
+#     yaxis = list(title = "Number of Respondents", range = c(0, 100)),
+#     legend = list(title = list(text = "Importance Level"))
+#   )
+```
+
 
 ```{r}
 #| echo: false
