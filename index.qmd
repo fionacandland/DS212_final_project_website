@@ -183,6 +183,7 @@ annotate_figure(plt9, top = text_grob(str_wrap("How important to you is it that 
 plt10<-ggplot(survey_data_2022_cleaner,aes(x=MUSEUMTYPE,fill=Q6_2))+
   geom_bar()+
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   scale_fill_manual(values = c(
      "Extremely Important"  = "#797d97",
      "Very Important"       = "#e15b4f",
@@ -193,6 +194,8 @@ plt10<-ggplot(survey_data_2022_cleaner,aes(x=MUSEUMTYPE,fill=Q6_2))+
   ylim(0,100) +
   theme_minimal()+labs(fill='',title='Year: 2022', x = '')
 =======
+=======
+>>>>>>> Stashed changes
    scale_fill_manual(values = c(
      "Very High Priority"  = "#7b3294",
      "High Priority"       = "#984ea3",
@@ -211,6 +214,7 @@ plt11<-ggplot(survey_data_2020_cleaner,aes(x=MUSEUMTYPE,fill=Q8_2))+
   geom_bar()+
    scale_fill_manual(values = c(
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
      "Extremely Important"  = "#797d97",
      "Very Important"       = "#e15b4f",
      "Somewhat Important"   = "#eeaa46", 
@@ -226,6 +230,8 @@ annotate_figure(plt12, top = text_grob(str_wrap("How important to you is it that
                color = "black", size = 14))
 
 =======
+=======
+>>>>>>> Stashed changes
      "Very High Priority"  = "#7b3294",
      "High Priority"       = "#984ea3",
      "Somewhat High Priority"   = "#a05260", 
@@ -247,6 +253,7 @@ annotate_figure(plt12, top = text_grob(str_wrap("How important to you is it that
 plt13<-ggplot(survey_data_2022_cleaner,aes(x=MUSEUMTYPE,fill=Q6_4))+
   geom_bar()+
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   scale_fill_manual(values = c(
      "Extremely Important"  = "#797d97",
      "Very Important"       = "#e15b4f",
@@ -257,6 +264,8 @@ plt13<-ggplot(survey_data_2022_cleaner,aes(x=MUSEUMTYPE,fill=Q6_4))+
   ylim(0,100) +
   theme_minimal()+labs(fill='',title='Year: 2022', x = '')
 =======
+=======
+>>>>>>> Stashed changes
    scale_fill_manual(values = c(
      "Very High Priority"  = "#7b3294",
      "High Priority"       = "#984ea3",
@@ -276,6 +285,7 @@ plt14<-ggplot(survey_data_2020_cleaner,aes(x=MUSEUMTYPE,fill=Q8_4))+
   geom_bar()+
    scale_fill_manual(values = c(
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
      "Extremely Important"  = "#797d97",
      "Very Important"       = "#e15b4f",
      "Somewhat Important"   = "#eeaa46", 
@@ -291,6 +301,8 @@ annotate_figure(plt15, top = text_grob(str_wrap("How important to you is it that
 
 
 =======
+=======
+>>>>>>> Stashed changes
      "Very High Priority"  = "#7b3294",
      "High Priority"       = "#984ea3",
      "Somewhat High Priority"   = "#a05260", 
