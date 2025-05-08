@@ -281,18 +281,6 @@ plt10<-ggplot(survey_data_2022_cleaner,aes(x=MUSEUMTYPE,fill=Q6_2))+
   ylim(0,100) +
   theme_minimal()+labs(fill='',title='Year: 2022', x = '')
 
-  #  scale_fill_manual(values = c(
-  #    "Very High Priority"  = "#7b3294",
-  #    "High Priority"       = "#984ea3",
-  #    "Somewhat High Priority"   = "#a05260", 
-  #    "Neither A High Priority Nor A Low Priority" = "#905d5d",
-  #    "Somewhat Low Priority" = "#984ea3",
-  #    "Low Priority" = 'maroon',
-  #    "Very Low Priority" = "red",
-  #    "No Response" = "grey"))+
-  # facet_grid(~MUSEUMTYPE)+
-  # theme_minimal()+labs(title="How much of a priority do you think each of the following equity, diversity, and inclusion strategies are in the art museum sector as a whole?:Increasing the diversity of staff in senior management positions")
-
 plt11<-ggplot(survey_data_2020_cleaner,aes(x=MUSEUMTYPE,fill=Q8_2))+
   geom_bar()+
    scale_fill_manual(values = c(
@@ -310,98 +298,8 @@ plt12<-ggarrange(plt11,plt10,ncol = 2, nrow = 1, common.legend = TRUE, legend = 
 annotate_figure(plt12, top = text_grob(str_c(str_wrap("How important to you is it that your museum serves in the following capacity in five years: The museum displays artwork from its permanent collections? Q6_2",75),'\n'),  
                color = "black", size = 14))
 
-
-  #    "Very High Priority"  = "#7b3294",
-  #    "High Priority"       = "#984ea3",
-  #    "Somewhat High Priority"   = "#a05260", 
-  #    "Neither A High Priority Nor A Low Priority" = "#905d5d",
-  #    "Somewhat Low Priority" = "#984ea3",
-  #    "Low Priority" = 'maroon',
-  #    "Very Low Priority" = "red",
-  #    "No Response" = "grey"))+
-  # facet_grid(~MUSEUMTYPE)+
-  # theme_minimal()+labs(title="How much of a priority do you think each of the following equity, diversity, and inclusion strategies are in the art museum sector as a whole?:Increasing the diversity of staff in senior management positions")
-
-
 ```
 
-```{r}
-#| echo: false
-#| message: false
-#| warning: false
-<<<<<<< Updated upstream
-# plt13<-ggplot(survey_data_2022_cleaner,aes(x=MUSEUMTYPE,fill=Q6_4))+
-#   geom_bar()+
-#   scale_fill_manual(values = c(
-#      "Extremely Important"  = "#797d97",
-#      "Very Important"       = "#4a2329",
-#      "Somewhat Important"   = "#eeaa46", 
-#      "Not Too Important"    = "#e15b4f",
-#      "Not At All Important" = "#44424d",
-#      "No Response" = "#cac7b9"))+
-#   ylim(0,100) +
-#   theme_minimal()+labs(fill='',title='Year: 2022', x = '')
-# 
-#   #  scale_fill_manual(values = c(
-#   #    "Very High Priority"  = "#7b3294",
-#   #    "High Priority"       = "#984ea3",
-#   #    "Somewhat High Priority"   = "#a05260", 
-#   #    "Neither A High Priority Nor A Low Priority" = "#905d5d",
-#   #    "Somewhat Low Priority" = "#984ea3",
-#   #    "Low Priority" = 'maroon',
-#   #    "Very Low Priority" = "red",
-#   #    "No Response" = "grey"))+
-#   #   
-#   # facet_grid(~MUSEUMTYPE)+
-#   # theme_minimal()+labs(title="How much of a priority do you think each of the following equity, diversity, and inclusion strategies are in the art museum sector as a whole?:Increasing the diversity of museum volunteers")
-# 
-# 
-# plt14<-ggplot(survey_data_2020_cleaner,aes(x=MUSEUMTYPE,fill=Q8_4))+
-#   geom_bar()+
-#    scale_fill_manual(values = c(
-# 
-#      "Extremely Important"  = "#797d97",
-#      "Very Important"       = "#4a2329",
-#      "Somewhat Important"   = "#eeaa46", 
-#      "Not Too Important"    = "#e15b4f",
-#      "Not At All Important" = "#44424d",
-#      "No Response" = "#cac7b9"))+ 
-#   ylim(0,100) +
-#   theme_minimal()+labs(fill='',title='Year: 2020', x = '')
-# 
-# plt15<-ggarrange(plt14,plt13,ncol = 2, nrow = 1, common.legend = TRUE, legend = 'right')
-# annotate_figure(plt15, top = text_grob(str_c(str_wrap("How important to you is it that your museum will serve in the following capacity in five years: The museum ensures the conservation of its collections for the long-term future",75),'\n'),  
-#                color = "black", size = 14))
-=======
-plt16<-ggplot(survey_data_2022_cleaner,aes(x=Year,fill=Q8_9))+
-  geom_bar()+
-   scale_fill_manual(values = c(
-     "Very High Priority"  = "#7b3294",
-     "High Priority"       = "#984ea3",
-     "Somewhat High Priority"   = "#a05260", 
-     "Neither A High Priority Nor A Low Priority" = "#905d5d",
-     "Somewhat Low Priority" = "#984ea3",
-     "Low Priority" = 'maroon',
-     "Very Low Priority" = "red",
-     "No Response" = "grey"))+
-  facet_grid(~MUSEUMTYPE)+
-  theme_minimal()+labs(title="How much of a priority do you think each of the following equity, diversity, and inclusion strategies are in the art museum sector as a whole?:Increasing the diversity of staff in senior management positions")
->>>>>>> Stashed changes
-
-
-  #    "Very High Priority"  = "#7b3294",
-  #    "High Priority"       = "#984ea3",
-  #    "Somewhat High Priority"   = "#a05260", 
-  #    "Neither A High Priority Nor A Low Priority" = "#905d5d",
-  #    "Somewhat Low Priority" = "#984ea3",
-  #    "Low Priority" = 'maroon',
-  #    "Very Low Priority" = "red",
-  #    "No Response" = "grey"))+
-  #   
-  # facet_grid(~MUSEUMTYPE)+
-  # theme_minimal()+labs(title="How much of a priority do you think each of the following equity, diversity, and inclusion strategies are in the art museum sector as a whole?:Increasing the diversity of museum volunteers")
-
-```
 
 Of note is the observation that a significant amount of art museum directors at municipal museums think it is extremely important that their museum displays artwork from its permanent collections now and in five years time. This priority level was apparent in 2020 but noticeably increased in 2022. This is interesting to consider given the social context that many museums faced budget cuts following the onset of the Covid-19 pandemic. And, it is not difficult to imagine that municipal museums funded by the government as opposed to wealthier universities may have faced more financial hardship. Perhaps this importance of relying on permanent collections is connected with falling budgets to collect new artwork. Regardless of the rationale, this outlook is concerning given that permanent collections at art museums in the U.S. are "disproportionately male and overwhelmingly white" (Sutton).
 
@@ -416,7 +314,6 @@ In addition to questions in the 5's and 6's, questions in the 8's appear to also
 plt16<-ggplot(survey_data_2022_cleaner,aes(x=MUSEUMTYPE,fill=Q8_9))+
   geom_bar()+
    scale_fill_manual(values = c(
-<<<<<<< Updated upstream
      "Very High Priority"  = "#797d97",
      "High Priority"       = "#4a2329",
      "Somewhat High Priority"   = "#eeaa46", 
@@ -428,13 +325,6 @@ plt16<-ggplot(survey_data_2022_cleaner,aes(x=MUSEUMTYPE,fill=Q8_9))+
     ylim(0,100) +
   theme_minimal()+labs(fill='',title='Year: 2022', x = '')
 
-  # scale_fill_manual(values = c(
-  #    "Extremely Important"  = "#797d97",
-  #    "Very Important"       = "#e15b4f",
-  #    "Somewhat Important"   = "#eeaa46", 
-  #    "Not Too Important"    = "#4a2329",
-  #    "Not At All Important" = "#44424d",
-  #    "No Response" = "#cac7b9"))+
 
 plt17<-ggplot(survey_data_2020_cleaner,aes(x=MUSEUMTYPE,fill=Q10_9))+
   geom_bar()+
@@ -451,28 +341,10 @@ plt17<-ggplot(survey_data_2020_cleaner,aes(x=MUSEUMTYPE,fill=Q10_9))+
   theme_minimal()+labs(fill='',title='Year: 2020', x = '')
 
 
-#      "Extremely Important"  = "#797d97",
-#      "Very Important"       = "#e15b4f",
-#      "Somewhat Important"   = "#eeaa46", 
-#      "Not Too Important"    = "#4a2329",
-#      "Not At All Important" = "#44424d",
-#      "No Response" = "#cac7b9"))+ #
-
 plt18<-ggarrange(plt17,plt16,ncol = 2, nrow = 1,common.legend = TRUE, legend='right')
 annotate_figure(plt18, top = text_grob(str_c(str_wrap("How much of a priority do you think each of the following equity, diversity, and inclusion strategies are in the art museum sector as a whole: Increasing the diversity of staff in senior management positions? Q8_9",75),'\n'), 
                color = "black", size = 14))
-=======
-     "Very High Priority"  = "#7b3294",
-     "High Priority"       = "#984ea3",
-     "Somewhat High Priority"   = "#a05260", 
-     "Neither A High Priority Nor A Low Priority" = "#905d5d",
-     "Somewhat Low Priority" = "#984ea3",
-     "Low Priority" = 'maroon',
-     "Very Low Priority" = "red",
-     "No Response" = "grey"))+
-  facet_grid(~MUSEUMTYPE)+
-  theme_minimal()+labs(title="How much of a priority do you think each of the following equity, diversity, and inclusion strategies are in the art museum sector as a whole?:Increasing the diversity of staff in senior management positions")
->>>>>>> Stashed changes
+
 
 ```
 
@@ -480,7 +352,7 @@ annotate_figure(plt18, top = text_grob(str_c(str_wrap("How much of a priority do
 #| echo: false
 #| message: false
 #| warning: false
-<<<<<<< Updated upstream
+
 plt19<-ggplot(survey_data_2022_cleaner,aes(x=MUSEUMTYPE,fill=Q8_11))+
   geom_bar()+scale_fill_manual(values = c(
      "Very High Priority"  = "#797d97",
@@ -493,13 +365,6 @@ plt19<-ggplot(survey_data_2022_cleaner,aes(x=MUSEUMTYPE,fill=Q8_11))+
      "No Response" = "#cac7b9"))+
   ylim(0,100) +
   theme_minimal()+labs(fill='',title='Year: 2022', x = '')
-  # scale_fill_manual(values = c(
-  #    # "Extremely Important"  = "#797d97",
-  #    # "Very Important"       = "#e15b4f",
-  #    # "Somewhat Important"   = "#eeaa46", 
-  #    # "Not Too Important"    = "#4a2329",
-  #    # "Not At All Important" = "#44424d",
-  #    # "No Response" = "#cac7b9"))+
 
 plt20<-ggplot(survey_data_2020_cleaner,aes(x=MUSEUMTYPE,fill=Q10_10))+
   geom_bar()+scale_fill_manual(values = c(
@@ -514,50 +379,10 @@ plt20<-ggplot(survey_data_2020_cleaner,aes(x=MUSEUMTYPE,fill=Q10_10))+
   ylim(0,100) +
   theme_minimal()+labs(fill='',title='Year: 2020', x = '')
 
-
-#      "Extremely Important"  = "#797d97",
-#      "Very Important"       = "#e15b4f",
-#      "Somewhat Important"   = "#eeaa46", 
-#      "Not Too Important"    = "#4a2329",
-#      "Not At All Important" = "#44424d",
-#      "No Response" = "#cac7b9"))+ #
-
-
 plt21<-ggarrange(plt20,plt19,ncol = 2, nrow = 1,common.legend = TRUE, legend='right')
 annotate_figure(plt21, top = text_grob(str_c(str_wrap("How much of a priority do you think each of the following equity, diversity, and inclusion strategies are in the art museum sector as a whole: Increasing the diversity of museum volunteers? Q8_11",75),'\n'), 
                color = "black", size = 14))
-=======
-plt19<-ggplot(survey_data_2022_cleaner,aes(x=Year,fill=Q8_11))+
-  geom_bar()+
-   scale_fill_manual(values = c(
-     "Very High Priority"  = "#7b3294",
-     "High Priority"       = "#984ea3",
-     "Somewhat High Priority"   = "#a05260", 
-     "Neither A High Priority Nor A Low Priority" = "#905d5d",
-     "Somewhat Low Priority" = "#984ea3",
-     "Low Priority" = 'maroon',
-     "Very Low Priority" = "red",
-     "No Response" = "grey"))+
-    
-  facet_grid(~MUSEUMTYPE)+
-  theme_minimal()+labs(title="How much of a priority do you think each of the following equity, diversity, and inclusion strategies are in the art museum sector as a whole?:Increasing the diversity of museum volunteers")
 
-
-plt20<-ggplot(survey_data_2020_cleaner,aes(x=Year,fill=Q10_10))+
-  geom_bar()+
-   scale_fill_manual(values = c(
-     "Very High Priority"  = "#7b3294",
-     "High Priority"       = "#984ea3",
-     "Somewhat High Priority"   = "#a05260", 
-     "Neither A High Priority Nor A Low Priority" = "#905d5d",
-     "Somewhat Low Priority" = "#984ea3",
-     "Low Priority" = 'maroon',
-     "Very Low Priority" = "red",
-     "No Response" = "grey"))+
-    
-  facet_grid(~MUSEUMTYPE)+
-  theme_minimal()+labs(title="How much of a priority do you think each of the following equity, diversity, and inclusion strategies are in the art museum sector as a whole?:Increasing the diversity of museum volunteers")
->>>>>>> Stashed changes
 
 ```
 
