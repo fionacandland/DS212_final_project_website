@@ -2,6 +2,10 @@
 title: "Data"
 ---
 
+
+![Pictured: NADAC logo, the collectors and organizers for the survey project and source for both of our datasets.](./NADAC.png) 
+
+
 # Aquisition
 We aquired both of our datasets from the National Archive of Data on Arts & Culture. All of the data is free to access online through the NADAC website. The particular project was funded by the Mellon Foundation. 
 

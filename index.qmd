@@ -356,5 +356,5 @@ Sutton, Benjamin. “A Study Found That 85% of Artists in U.S. Museum Collection
 
 image: https://www.theguardian.com/artanddesign/2018/apr/14/max-hollein-metropolitan-museum-art-director-diversity-debate
 
-
+image (on Data tab): https://www.icpsr.umich.edu/web/NADAC/studies/38701/datadocumentation 
 
