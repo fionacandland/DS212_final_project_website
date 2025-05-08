@@ -1,0 +1,30 @@
+
+.navbar {
+  background-color: #eeaa46 !important;
+}
+
+
+.navbar a,
+.navbar-brand,
+.navbar-nav .nav-link {
+  color: black !important;
+}
+
+
+
+.sidebar nav .nav-link.active {
+  color: #797d97 !important; 
+  font-weight: normal;       
+}
+
+
+.sidebar nav .nav-link.active::before {
+  background-color: transparent !important;
+  width: 0;
+  content: none;
+}
+
+
+.sidebar nav .nav-link {
+  color: #797d97 !important; 
+}

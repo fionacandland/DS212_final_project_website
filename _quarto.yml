@@ -1,5 +1,6 @@
 project:
   type: website
+  output-dir: docs
   resources:
     - plots/plotly_cluster.html
     - Milestone_5_task_1.qmd
