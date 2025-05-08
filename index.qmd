@@ -4,7 +4,7 @@
 
 <!-- <iframe width = "700" height = "500" src="plots/plotly_cluster.html"></iframe> -->
 
-![Pictured: Max Hollein, the Metropolitan Museum of Art’s 10th consecutive white male director. Photo: The Guardian.](/museumpic.jpeg)
+![Pictured: Max Hollein, the Metropolitan Museum of Art’s 10th consecutive white male director. Photo: The Guardian.](./museumpic.jpeg)
 
 Art Museums are a powerful tool for social good in society. Museums, especially those with free and reduced admission fees, can cut across social barriers to accessing art, such as socioeconomic status and systemic inequality, and connect people of all ages to cultures, ideas, and images that can broaden one's worldview. In turn, this contributes to building a world where we all understand each other just a little bit better. However, despite the potential of museums to be sites of access and education, they are also sites of social harm. Museum conditions and practices are inequitable for staff, visitors, and the artists whose work these institutions choose not to display. Offering a glimpse into the inequity within museum staffing is Max Hollein, who currently presides as the director of the Metropolitan (Met) Museum of Art in New York City. Hollein is the Met's 10th consecutive white male director (Sayej). Further, more than 25% of art museum workers report having experienced discrimination at their current institutions, and discrimination is twice as likely for an art museum worker with a disability (“Findings”). Regarding race and ethnic groups, discrimination is particularly high for Native American/ Alaska Native workers at 39% compared to only 24% of white workers reporting that they have experienced discrimination (“Findings”). 
 
@@ -15,7 +15,7 @@ As we consider the current and future state of art museums and their commitments
 
 # Research Questions
 
-One demographic with the power to improve art museums or continue perpetuating inequity, is art museum directors.In light of the pandemic and murder of Geroge Floyd, two events with global impact, we are curious how art museum directors’ opinions on diversity and equity compare in 2020 to 2022, and conduct this study using responses to the Art Museum Director Survey, in 2020 and 2022. The Art Museum Director Survey examines strategy and leadership issues, such as staffing, budgeting, and resource allocations, from the perspective of art museum directors across the U.S. Given that the 2020 survey closed on March 30th, 2020, these two surveys offer a glimpse into director opinions before and after the beginning of the pandemic and the murder of George Floyd. In our investigation we ask two questions:
+One demographic with the power to improve art museums or continue perpetuating inequity, is art museum directors. In light of the pandemic and murder of Geroge Floyd, two events with global impact, we are curious how art museum directors’ opinions on diversity and equity compare in 2020 to 2022, and conduct this study using responses to the Art Museum Director Survey, in 2020 and 2022. The Art Museum Director Survey examines strategy and leadership issues, such as staffing, budgeting, and resource allocations, from the perspective of art museum directors across the U.S. Given that the 2020 survey closed on March 30th, 2020, these two surveys offer a glimpse into director opinions before and after the beginning of the pandemic and the murder of George Floyd. In our investigation we ask two questions:
 
 1)How do survey responses in 2020 compare to responses in 2022? 
 
@@ -60,7 +60,7 @@ plot_ly(
 
 ```
 
-To initially explore the structure and similarities among variables and responders, we turned to unsupervised learning techniques popular in statistical modeling: Principal Component Analysis (PCA) and K-Means Clustering. We chose Dimension Reduction techniques because of the large number of survey questions we had. These techniques are excellent at identifying patterns and important features in large datasets. The goal of these preliminary plots was to understand patterns in responses and the overall influence of different survey questions in creating such patterns. Our findings would then inform which variables we decided to take a closer look at and patterns to look for between variable responses. First, we performed principal component analysis on our 2022 data, which essentially transforms the original survey data into a set of new summary variables that contain the main points of the data. These summary variables are called principal components, as you’ll notice on the x and y axis labels of the upcoming plot. 
+To initially explore the structure and similarities among variables and responders, we turned to unsupervised learning techniques popular in statistical modeling: Principal Component Analysis (PCA) and K-Means Clustering. We chose Dimension Reduction techniques because of the large number of survey questions we had. These techniques are excellent at identifying patterns and important features in large datasets. The goal of these preliminary plots was to understand patterns in responses and the overall influence of different survey questions in creating such patterns. Our findings would then inform which variables we decided to take a closer look at and patterns to look for between variable responses. First, we performed principal component analysis on our 2022 data, which essentially transforms the original survey data into a set of new summary variables that contain the main points of the data. These summary variables are called principal components, as you’ll notice on the x and y axis labels of the plot. 
 
 
 ## Survey Question Loading Plot
@@ -130,66 +130,13 @@ plt2<-ggplot(survey_data_2020_cleaner,aes(x=MUSEUMTYPE,fill=Q7_1))+
   ylim(0,100) +
   theme_minimal()+labs(fill='',title='Year: 2020', x = '')
 
-
-plt3<-ggarrange(plt2,plt1,ncol = 2, nrow = 1, common.legend = TRUE, legend = 'right')
+#Brianna's Solution to the Legend Problem
+plt3<-ggarrange(plt2 + theme(legend.position = "none"),plt1 + theme(legend.position = "none"),ncol = 3, nrow = 1, get_legend(plt1), widths = c(3,3,2))
 annotate_figure(plt3, top = text_grob(str_c(str_wrap("How important to you is it that your museum currently serves in the following capacity: The museum regularly acquires artwork? Q5_1",75),'\n'),  
                color = "black", size = 14))
 
 ```
 
-```{r}
-#| echo: false
-#| message: false
-#| warning: false
-
-# library(plotly)
-# library(dplyr)
-# survey_data_2022_plotly <- survey_data_2022_cleaner %>%
-#   mutate(id = row_number())
-# 
-# survey_data_2020_plotly < survey_data_2020_cleaner %>% 
-#   mutate(id = row_number())
-# 
-# # Step 2: Prepare data for stacked bar with hover
-# bar_data <- survey_data_2022_cleaner %>%
-#   group_by(MUSEUMTYPE, Q5_1) %>%
-#   summarise(
-#     count = n(),
-#     ids = paste(id, collapse = ", "),
-#     .groups = "drop"
-#   )
-# 
-# # Step 3: Create stacked bar plot with hover text showing IDs
-# plot_ly(
-#   data = bar_data,
-#   x = ~MUSEUMTYPE,
-#   y = ~count,
-#   type = "bar",
-#   color = ~Q5_1,
-#   colors = c(
-#     "Extremely Important"  = "#797d97",
-#     "Very Important"       = "#4a2329",
-#     "Somewhat Important"   = "#eeaa46", 
-#     "Not Too Important"    = "#e15b4f",
-#     "Not At All Important" = "#44424d",
-#     "No Response"          = "#cac7b9"
-#   ),
-#   text = ~paste(
-#     "Response: ", Q5_1,
-#     "<br>Museum Type: ", MUSEUMTYPE,
-#     "<br>Count: ", count,
-#     "<br>IDs: ", ids
-#   ),
-#   hoverinfo = "text"
-# ) %>%
-#   layout(
-#     barmode = "stack",
-#     title = "How important is it that your museum acquires artwork?",
-#     xaxis = list(title = ""),
-#     yaxis = list(title = "Number of Respondents", range = c(0, 100)),
-#     legend = list(title = list(text = "Importance Level"))
-#   )
-```
 
 ```{r}
 #| echo: false

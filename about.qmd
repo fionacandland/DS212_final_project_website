@@ -1,13 +1,15 @@
 ---
-title: "About"
+title: "Data"
 ---
-# The Story
 
-# The Data
+# Aquisition
+We aquired both of our datasets from the National Archive of Data on Arts & Culture. All of the data is free to access online through the NADAC website. The particular project was funded by the Mellon Foundation. 
 
-## The survey detials
+# Cleaning 
+In order to get our data ready to explore and analyze, we had to do some preliminary cleaning. This consisted of screening the questions and identifying which ones had a match between the two years, and which questions were excluded from one of the years. Additionally, in our preliminary cleaning phase, we took out many demographic and identifying variables like questions about responder identity and the institution’s characteristics because they were masked by the ICPSR. We would have loved to include these demographic indicators, however, the information was not available to us, so we decided to remove those variables as the contents were meaningless. We also decided to take out the questions without a match as our research was aimed towards change over time. 
+Getting into the more computational cleaning, we computed the NA rate on each column. If a column had greater than 10% NAs, we removed it and its counterpart from the other dataset. While we do think the abundant missingness in our datasets was interesting, we had over 100 questions to analyze and felt that removing these questions would not leave our datasets colorless or our findings less compelling. This decision was primarily driven by the consistency and cleanliness of the dataset.
 
-
-## Data Aquisition
-
+# Wrangling
+After removing the columns with greater than 10% NA, we looked through each row, which represents each response, and calculated their responses throughout the survey. If the responder answered less than 50% of the survey questions, we removed them from the data set, inferring that they had put little effort into the response, and therefore, the few responses that they gave may not be representative of their beliefs. For the people who responded to more than 50% of the questions, we converted their NAs to No Answer to reflect a conscious decision not to answer the specific question, for whatever reason. We made these decisions based on the volume of NAs in the dataset, hoping to reflect the randomness and deliberation of missingness in a structured, clear way.
+Our last step in cleaning the data was releveling the response factors. The 2020 survey was recorded with string responses like “High Priority” or “Very Low Priority”, while the 2022 responses were recorded with integers, 1 representing “Very High Priority”, and the higher numbers representing a decrease in priority. Because of this inconsistency, we had to go through the 2022 dataset and relevel the integers to reflect spring responses both for clarity and consistency.
 
