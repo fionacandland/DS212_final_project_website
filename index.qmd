@@ -15,7 +15,7 @@ As we consider the current and future state of art museums and their commitments
 
 # Research Questions
 
-One demographic with the power to improve art museums or continue perpetuating inequity, is art museum directors.In light of the pandemic and murder of Geroge Floyd, two events with global impact, we are curious how art museum directors’ opinions on diversity and equity compare in 2020 to 2022, and conduct this study using responses to the Art Museum Director Survey, in 2020 and 2022. The Art Museum Director Survey examines strategy and leadership issues, such as staffing, budgeting, and resource allocations, from the perspective of art museum directors across the U.S. Given that the 2020 survey closed on March 30th, 2020, these two surveys offer a glimpse into director opinions before and after the beginning of the pandemic and the murder of George Floyd. In our investigation we ask two questions:
+One demographic with the power to improve art museums or continue perpetuating inequity, is art museum directors. In light of the pandemic and murder of Geroge Floyd, two events with global impact, we are curious how art museum directors’ opinions on diversity and equity compare in 2020 to 2022, and conduct this study using responses to the Art Museum Director Survey, in 2020 and 2022. The Art Museum Director Survey examines strategy and leadership issues, such as staffing, budgeting, and resource allocations, from the perspective of art museum directors across the U.S. Given that the 2020 survey closed on March 30th, 2020, these two surveys offer a glimpse into director opinions before and after the beginning of the pandemic and the murder of George Floyd. In our investigation we ask two questions:
 
 1)How do survey responses in 2020 compare to responses in 2022? 
 
@@ -137,59 +137,6 @@ annotate_figure(plt3, top = text_grob(str_c(str_wrap("How important to you is it
 
 ```
 
-```{r}
-#| echo: false
-#| message: false
-#| warning: false
-
-# library(plotly)
-# library(dplyr)
-# survey_data_2022_plotly <- survey_data_2022_cleaner %>%
-#   mutate(id = row_number())
-# 
-# survey_data_2020_plotly < survey_data_2020_cleaner %>% 
-#   mutate(id = row_number())
-# 
-# # Step 2: Prepare data for stacked bar with hover
-# bar_data <- survey_data_2022_cleaner %>%
-#   group_by(MUSEUMTYPE, Q5_1) %>%
-#   summarise(
-#     count = n(),
-#     ids = paste(id, collapse = ", "),
-#     .groups = "drop"
-#   )
-# 
-# # Step 3: Create stacked bar plot with hover text showing IDs
-# plot_ly(
-#   data = bar_data,
-#   x = ~MUSEUMTYPE,
-#   y = ~count,
-#   type = "bar",
-#   color = ~Q5_1,
-#   colors = c(
-#     "Extremely Important"  = "#797d97",
-#     "Very Important"       = "#4a2329",
-#     "Somewhat Important"   = "#eeaa46", 
-#     "Not Too Important"    = "#e15b4f",
-#     "Not At All Important" = "#44424d",
-#     "No Response"          = "#cac7b9"
-#   ),
-#   text = ~paste(
-#     "Response: ", Q5_1,
-#     "<br>Museum Type: ", MUSEUMTYPE,
-#     "<br>Count: ", count,
-#     "<br>IDs: ", ids
-#   ),
-#   hoverinfo = "text"
-# ) %>%
-#   layout(
-#     barmode = "stack",
-#     title = "How important is it that your museum acquires artwork?",
-#     xaxis = list(title = ""),
-#     yaxis = list(title = "Number of Respondents", range = c(0, 100)),
-#     legend = list(title = list(text = "Importance Level"))
-#   )
-```
 
 ```{r}
 #| echo: false

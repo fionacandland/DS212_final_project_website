@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>About – Art Museum Director Semtiments on Diversity, Equity, and Inclusion as seen in Surveys from 2020 and 2022</title>
+<title>Data – Diversity and Equity in Art Museums: Insights from Director Surveys</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -79,7 +79,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">Art Museum Director Semtiments on Diversity, Equity, and Inclusion as seen in Surveys from 2020 and 2022</span>
+    <span class="navbar-title">Diversity and Equity in Art Museums: Insights from Director Surveys</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -94,7 +94,7 @@ ul.task-list li input[type="checkbox"] {
   </li>  
   <li class="nav-item">
     <a class="nav-link active" href="./about.html" aria-current="page"> 
-<span class="menu-text">About</span></a>
+<span class="menu-text">Data</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -111,12 +111,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#the-story" id="toc-the-story" class="nav-link active" data-scroll-target="#the-story">The Story</a></li>
-  <li><a href="#the-data" id="toc-the-data" class="nav-link" data-scroll-target="#the-data">The Data</a>
-  <ul class="collapse">
-  <li><a href="#the-survey-detials" id="toc-the-survey-detials" class="nav-link" data-scroll-target="#the-survey-detials">The survey detials</a></li>
-  <li><a href="#data-aquisition" id="toc-data-aquisition" class="nav-link" data-scroll-target="#data-aquisition">Data Aquisition</a></li>
-  </ul></li>
+  <li><a href="#aquisition" id="toc-aquisition" class="nav-link active" data-scroll-target="#aquisition">Aquisition</a></li>
+  <li><a href="#cleaning" id="toc-cleaning" class="nav-link" data-scroll-target="#cleaning">Cleaning</a></li>
+  <li><a href="#wrangling" id="toc-wrangling" class="nav-link" data-scroll-target="#wrangling">Wrangling</a></li>
   </ul>
 </nav>
 </nav>
@@ -129,7 +126,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">About</h1>
+<h1 class="title">Data</h1>
 </div>
 
 
@@ -146,19 +143,19 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="the-story" class="level1">
-<h1>The Story</h1>
+<section id="aquisition" class="level1">
+<h1>Aquisition</h1>
+<p>We aquired both of our datasets from the National Archive of Data on Arts &amp; Culture. All of the data is free to access online through the NADAC website. The particular project was funded by the Mellon Foundation.</p>
 </section>
-<section id="the-data" class="level1">
-<h1>The Data</h1>
-<section id="the-survey-detials" class="level2">
-<h2 class="anchored" data-anchor-id="the-survey-detials">The survey detials</h2>
+<section id="cleaning" class="level1">
+<h1>Cleaning</h1>
+<p>In order to get our data ready to explore and analyze, we had to do some preliminary cleaning. This consisted of screening the questions and identifying which ones had a match between the two years, and which questions were excluded from one of the years. Additionally, in our preliminary cleaning phase, we took out many demographic and identifying variables like questions about responder identity and the institution’s characteristics because they were masked by the ICPSR. We would have loved to include these demographic indicators, however, the information was not available to us, so we decided to remove those variables as the contents were meaningless. We also decided to take out the questions without a match as our research was aimed towards change over time. Getting into the more computational cleaning, we computed the NA rate on each column. If a column had greater than 10% NAs, we removed it and its counterpart from the other dataset. While we do think the abundant missingness in our datasets was interesting, we had over 100 questions to analyze and felt that removing these questions would not leave our datasets colorless or our findings less compelling. This decision was primarily driven by the consistency and cleanliness of the dataset.</p>
 </section>
-<section id="data-aquisition" class="level2">
-<h2 class="anchored" data-anchor-id="data-aquisition">Data Aquisition</h2>
+<section id="wrangling" class="level1">
+<h1>Wrangling</h1>
+<p>After removing the columns with greater than 10% NA, we looked through each row, which represents each response, and calculated their responses throughout the survey. If the responder answered less than 50% of the survey questions, we removed them from the data set, inferring that they had put little effort into the response, and therefore, the few responses that they gave may not be representative of their beliefs. For the people who responded to more than 50% of the questions, we converted their NAs to No Answer to reflect a conscious decision not to answer the specific question, for whatever reason. We made these decisions based on the volume of NAs in the dataset, hoping to reflect the randomness and deliberation of missingness in a structured, clear way. Our last step in cleaning the data was releveling the response factors. The 2020 survey was recorded with string responses like “High Priority” or “Very Low Priority”, while the 2022 responses were recorded with integers, 1 representing “Very High Priority”, and the higher numbers representing a decrease in priority. Because of this inconsistency, we had to go through the 2022 dataset and relevel the integers to reflect spring responses both for clarity and consistency.</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

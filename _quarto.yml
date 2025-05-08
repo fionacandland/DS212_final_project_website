@@ -7,10 +7,13 @@ project:
 website:
   title: "Diversity and Equity in Art Museums: Insights from Director Surveys"
   navbar:
+    title: "Diversity and Equity in Art Museums: Insights from Director Surveys"
     left:
       - href: index.qmd
         text: Home
-      - about.qmd
+      - href: about.qmd
+        text: Data
+        
 
 format:
   html:
