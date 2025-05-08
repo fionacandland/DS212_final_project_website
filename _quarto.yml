@@ -5,7 +5,7 @@ project:
     - Milestone_5_task_1.qmd
 
 website:
-  title: "Art Museum Director Semtiments on Diversity, Equity, and Inclusion as seen in Surveys from 2020 and 2022"
+  title: "Diversity and Equity in Art Museums: Insights from Director Surveys"
   navbar:
     left:
       - href: index.qmd
