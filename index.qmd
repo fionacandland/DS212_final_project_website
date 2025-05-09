@@ -10,9 +10,6 @@
 
 # Art Museums: The Context
 
-
-<!-- <iframe width = "700" height = "500" src="plots/plotly_cluster.html"></iframe> -->
-
 ![Pictured: Max Hollein, the Metropolitan Museum of Art’s 10th consecutive white male director. Photo: The Guardian.](./museumpic.jpeg)
 
 Art Museums are a powerful tool for social good in society. Museums, especially those with free and reduced admission fees, can cut across social barriers to accessing art, such as socioeconomic status and systemic inequality, and connect people of all ages to cultures, ideas, and images that can broaden one's worldview. In turn, this contributes to building a world where we all understand each other just a little bit better. However, despite the potential of museums to be sites of access and education, they are also sites of social harm. Museum conditions and practices are inequitable for staff, visitors, and the artists whose work these institutions choose not to display. Offering a glimpse into the inequity within museum staffing is Max Hollein, who currently presides as the director of the Metropolitan (Met) Museum of Art in New York City. Hollein is the Met's 10th consecutive white male director (Sayej). Further, more than 25% of art museum workers report having experienced discrimination at their current institutions, and discrimination is twice as likely for an art museum worker with a disability (“Findings”). Regarding race and ethnic groups, discrimination is particularly high for Native American/ Alaska Native workers at 39% compared to only 24% of white workers reporting that they have experienced discrimination (“Findings”). 
@@ -65,7 +62,6 @@ plot_ly(
     yaxis = list(title = "PC2"),
     legend = list(title = list(text = "Cluster"))
   )
-
 
 ```
 
